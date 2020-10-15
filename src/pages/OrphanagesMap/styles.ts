@@ -8,6 +8,7 @@ export const Container = styled.div`
   display: flex;
 
   > aside {
+    z-index: 10;
     width: 440px;
     background: linear-gradient(329.54deg, #29B6D1 0%, #00C7C7 100%);
 
@@ -18,9 +19,25 @@ export const Container = styled.div`
 
     > footer {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
 
-      line-height: 24px;
+      > div {
+          margin-left: 24px;
+          display: flex;
+        flex-direction: column;
+        line-height: 24px;
+      }
+
+      > a {
+          background: #ffd666;
+          
+
+          &:hover {
+            background: #96feff;
+          }
+        }
 
       > strong {
         font-weight: 800;
